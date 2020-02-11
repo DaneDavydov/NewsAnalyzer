@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Denis Davydov">
+  <meta name="description" content="News Analyzer">
+  <meta name="keywords" content="HTML, CSS, JavaScript, Yandex Praktikum">
+  <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.analytics.css %>">
+  <!-- <link rel="shortcut icon" href="<%=require('./images/favicon.png')%>" type="image/png"> -->
+  <title>News Analyzer - Analytics</title>
+</head>
+
+<body>
+  <script src="<%= htmlWebpackPlugin.files.chunks.analytics.entry %>"></script>
+</body>
+
+</html>
