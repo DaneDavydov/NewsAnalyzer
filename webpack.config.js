@@ -17,25 +17,34 @@ module.exports = {
   },
   module: {
     rules: [{
-        test: /\.js$/,
-        exclude: /node_modules/,
-        use: {
-          loader: "babel-loader"
-        }
-      },
+      test: /\.js$/,
+      exclude: /node_modules/,
+      use: {
+        loader: "babel-loader"
+      }
+    },
       {
         test: /\.css$/,
-        use: [MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader']
+        use: [
+          {
+            loader: MiniCssExtractPlugin.loader,
+            options: {
+              publicPath: "../",
+            }
+          },
+          'css-loader',
+          'postcss-loader',
+        ]
       },
       {
         test: /\.(png|jpg|gif|ico|svg)$/,
         use: [{
-            loader: 'file-loader',
-            options: {
-              esModule: false,
-              name: './images/[name].[ext]'
-            },
+          loader: 'file-loader',
+          options: {
+            esModule: false,
+            name: './images/[name].[ext]'
           },
+        },
           {
             loader: 'image-webpack-loader',
             options: {
