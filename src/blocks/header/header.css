@@ -1,8 +1,13 @@
 @import url("./_bg/header_bg.css");
+@import url("./__link/header__link.css");
+@import url("./__link/_active/header__link_active.css");
+@import url("./__logo/header__logo.css");
+@import url("./__nav/header__nav.css");
+@import url("__wrap/header__wrap.css");
 
 .header {
-  width: 100%;
   max-width: 1440px;
   height: 576px;
   margin: 0 auto;
+  color: #FFFFFF;
 }
