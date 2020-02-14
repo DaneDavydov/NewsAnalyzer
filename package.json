@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/DaneGalahad/NewsAnalyzer.git"
+    "url": "git+https://github.com/DaneDavydov/NewsAnalyzer.git"
   },
   "author": "Denis Davydov",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/DaneGalahad/NewsAnalyzer/issues"
+    "url": "https://github.com/DaneDavydov/NewsAnalyzer/issues"
   },
-  "homepage": "https://github.com/DaneGalahad/NewsAnalyzer#readme",
+  "homepage": "https://github.com/DaneDavydov/NewsAnalyzer#readme",
   "devDependencies": {
     "@babel/cli": "7.8.4",
     "@babel/core": "7.8.4",

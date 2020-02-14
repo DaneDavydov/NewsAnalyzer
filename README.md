@@ -14,7 +14,7 @@ Cервис для анализа происходящих в мире собы�
 - Webpack
 
 # Сылка на демо проекта
-https://danegalahad.github.io/NewsAnalyzer/
+https://danedavydov.github.io/NewsAnalyzer/
 
 # Установка
 
@@ -22,7 +22,7 @@ https://danegalahad.github.io/NewsAnalyzer/
 
 Скопируйте проект на компьютер:
 ```
-git clone https://github.com/danegalahad/NewsAnalyzer.git
+git clone https://github.com/danedavydov/NewsAnalyzer.git
 ```
 
 Установите зависимости:
