@@ -3,7 +3,10 @@
 @import url("./__link/_active/header__link_active.css");
 @import url("./__logo/header__logo.css");
 @import url("./__nav/header__nav.css");
-@import url("__wrap/header__wrap.css");
+@import url("./__wrap/header__wrap.css");
+@import url("./__content/header__content.css");
+@import url("./__title/header__title.css");
+@import url("./__subtitle/header__subtitle.css");
 
 .header {
   max-width: 1440px;
