@@ -1,13 +1,8 @@
-
 .header__link {
   text-decoration: none;
   color: #B6BCBF;
-}
-
-.header__link:first-child {
   margin-right: 32px;
 }
-
 .header__link:hover {
   color: #FFFFFF;
   transition: 0.3s linear;

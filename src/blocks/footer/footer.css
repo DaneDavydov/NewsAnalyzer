@@ -1,0 +1,12 @@
+@import url("__link/footer__link.css");
+@import url("__links/footer__links.css");
+@import url("__social/footer__social.css");
+@import url("__social-item/footer__socail-item.css");
+@import url("__copyright/footer__copyright.css");
+
+.footer {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 28px;
+  padding-bottom: 28px
+}
