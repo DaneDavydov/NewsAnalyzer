@@ -1,6 +1,13 @@
 @import url("__title/search-results__title.css");
 @import url("__link/search-results__link.css");
 @import url("__more-button/search-results__more-button.css");
+@import url("__card-wrapper/search-results__card-wrapper.css");
+@import url("__card-image/search-results__card-image.css");
+@import url("__card-text/search-results__card-text.css");
+@import url("__card-source/search-results__card-source.css");
+@import url("__card-title/search-results__card-title.css");
+@import url("__cards/search-results__cards.css");
+@import url("__card-date/search-results__card-date.css");
 
 .search-results {
   background-color: #F5F6F7;

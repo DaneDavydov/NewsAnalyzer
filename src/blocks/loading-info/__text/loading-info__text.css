@@ -4,5 +4,9 @@
   text-align: center;
   color: #B6BCBF;
   max-width: 344px;
-  margin: 16px auto 0 auto;
+  margin: 38px auto 0 auto;
 }
+
+/*.loading-info__text:last-child {*/
+/*  margin: 18px auto 0 auto;*/
+/*}*/

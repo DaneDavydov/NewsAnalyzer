@@ -1,0 +1,5 @@
+.search-results__cards {
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 16px;
+  margin: 64px 0;
+}
