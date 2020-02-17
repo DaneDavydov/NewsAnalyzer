@@ -1,0 +1,7 @@
+@import url("__title/search-results__title.css");
+@import url("__link/search-results__link.css");
+@import url("__more-button/search-results__more-button.css");
+
+.search-results {
+  background-color: #F5F6F7;
+}

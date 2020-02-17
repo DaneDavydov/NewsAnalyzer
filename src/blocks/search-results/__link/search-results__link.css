@@ -1,0 +1,12 @@
+.search-results__link {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  text-decoration: none;
+  color:#1A1B22;
+  transition: opacity .3s linear;
+}
+
+.search-results__link:hover {
+  opacity: 0.6;
+}

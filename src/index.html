@@ -35,7 +35,7 @@
       </div>
     </header>
     <main class="content">
-      <section class="loading-info">
+      <section class="loading-info section">
         <div class="loading-info__preloader hidden">
           <i class="loading-info__circle-preloader"></i>
           <p class="loading-info__text">Идет поиск новостей...</p>
@@ -46,8 +46,18 @@
           <p class="loading-info__text">К сожалению по вашему запросу ничего не найдено.</p>
         </div>
       </section>
-      <section class="search-results"></section>
-      <section class="about-author">
+      <section class="search-results section">
+        <div class="search-results__header">
+          <h2 class="title search-results__title">Результаты поиска</h2>
+          <a href="./analytics.html" class="search-results__link">Посмотреть аналитику <img
+              src="<%=require('./images/arrow.png')%>" alt="стрелка" class=""></a>
+        </div>
+        <div class="search-results__cards">
+
+        </div>
+        <button class="search-results__more-button">Показать еще</button>
+      </section>
+      <section class="about-author section">
         <img src="<%=require('./images/about-author.png')%>" alt="authot photo" class="about-author__img">
         <div class="about-author__content">
           <h2 class="title about-author__title">Об авторе</h2>

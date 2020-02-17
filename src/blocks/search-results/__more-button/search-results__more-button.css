@@ -1,0 +1,15 @@
+.search-results__more-button {
+  background-color: #FFFFFF;
+  border-radius: 80px;
+  border: none;
+  width: 288px;
+  height: 64px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.search-results__more-button:hover {
+  background-color: rgba(232, 232, 233, 0.993);
+  cursor: pointer;
+}
