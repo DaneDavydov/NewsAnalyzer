@@ -1,0 +1,8 @@
+.loading-info__not-found {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #F5F6F7;
+  padding: 80px 0;
+}

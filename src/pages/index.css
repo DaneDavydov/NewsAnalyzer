@@ -8,3 +8,5 @@
 @import url("../blocks/content/content.css");
 @import url("../blocks/about-authot/about-author.css");
 @import url("../blocks/footer/footer.css");
+@import url("../blocks/loading-info/loading-info.css");
+@import url("../blocks/hidden/hidden.css");
