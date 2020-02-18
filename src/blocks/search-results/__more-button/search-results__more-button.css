@@ -7,6 +7,7 @@
   font-weight: 500;
   font-size: 18px;
   line-height: 24px;
+  margin: 64px auto;
 }
 
 .search-results__more-button:hover {

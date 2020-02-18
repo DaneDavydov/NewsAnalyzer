@@ -8,7 +8,11 @@
 @import url("__card-title/search-results__card-title.css");
 @import url("__cards/search-results__cards.css");
 @import url("__card-date/search-results__card-date.css");
+@import url("__header/search-results__header.css");
+@import url("__card-link/search-results__card-link.css");
 
 .search-results {
   background-color: #F5F6F7;
+  display: flex;
+  flex-direction: column;
 }

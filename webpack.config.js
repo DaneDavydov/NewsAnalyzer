@@ -7,9 +7,9 @@ const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 
 module.exports = {
   entry: {
-    main: './src/scripts/index.js',
-    about: './src/scripts/about.js',
-    analytics: './src/scripts/analytics.js'
+    main: './src/index.js',
+    about: './src/about.js',
+    analytics: './src/analytics.js'
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -17,16 +17,15 @@ module.exports = {
   },
   module: {
     rules: [{
-      test: /\.js$/,
-      exclude: /node_modules/,
-      use: {
-        loader: "babel-loader"
-      }
-    },
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: {
+          loader: "babel-loader"
+        }
+      },
       {
         test: /\.css$/,
-        use: [
-          {
+        use: [{
             loader: MiniCssExtractPlugin.loader,
             options: {
               publicPath: "../",
@@ -39,16 +38,33 @@ module.exports = {
       {
         test: /\.(png|jpg|gif|ico|svg)$/,
         use: [{
-          loader: 'file-loader',
-          options: {
-            esModule: false,
-            name: './images/[name].[ext]'
+            loader: 'file-loader',
+            options: {
+              esModule: false,
+              name: './images/[name].[ext]'
+            },
           },
-        },
           {
             loader: 'image-webpack-loader',
             options: {
-              disable: true
+              mozjpeg: {
+                progressive: true,
+                quality: 65
+              },
+              // optipng.enabled: false will disable optipng
+              optipng: {
+                enabled: false,
+              },
+              pngquant: {
+                quality: [1, 1],
+                speed: 4
+              },
+              gifsicle: {
+                interlaced: false,
+              },
+              webp: {
+                quality: 100
+              }
             }
           },
         ]
