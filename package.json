@@ -2,7 +2,7 @@
   "name": "newsanalyzer",
   "version": "0.0.1",
   "description": "news analysis service",
-  "main": "src/scripts/index.js",
+  "main": "src/js/index.js",
   "scripts": {
     "dev": "webpack-dev-server --mode development --open --watch",
     "build": "rimraf dist && webpack --mode production",
