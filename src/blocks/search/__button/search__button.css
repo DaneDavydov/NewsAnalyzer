@@ -13,3 +13,7 @@
   z-index: 1;
   cursor: pointer;
 }
+
+.search__button:hover {
+  background: #347EFF;
+}

@@ -1,4 +1,4 @@
-.search-results__card-source {
+.news-card__source {
   color: #B6BCBF;
   font-family: Roboto Slab;
   font-style: normal;
@@ -7,5 +7,6 @@
   line-height: 20px;
   letter-spacing: 0.4px;
   text-transform: uppercase;
-  padding: 0 24px
+  position: absolute;
+  bottom: 24px;
 }

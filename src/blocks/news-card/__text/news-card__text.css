@@ -1,0 +1,10 @@
+.news-card__text {
+  margin: 16px 0 0 0;
+  color: #1A1B22;
+  font-size: 16px;
+  line-height: 22px;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}

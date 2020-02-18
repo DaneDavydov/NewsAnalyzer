@@ -1,0 +1,16 @@
+@import url("__link/news-card__link.css");
+@import url("__date/news-card__date.css");
+@import url("__image/news-card__image.css");
+@import url("__text/news-card__text.css");
+@import url("__source/news-card__source.css");
+@import url("__title/news-card__title.css");
+@import url("__description/news-card__description.css");
+
+.news-card {
+  width: 400px;
+  height: 576px;
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  position: relative;
+}

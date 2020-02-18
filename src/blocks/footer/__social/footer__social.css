@@ -1,5 +1,7 @@
 .footer__social {
   display: flex;
+  justify-content: space-between;
   list-style-type: none;
   margin: 0;
+  max-width: 70px;
 }
