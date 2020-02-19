@@ -1,0 +1,5 @@
+.technologies__wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding: 80px 176px 82px 104px;
+}

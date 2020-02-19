@@ -1,0 +1,4 @@
+.slider__avatar {
+  object-fit: cover;
+  border-radius: 50%;
+}
