@@ -35,17 +35,15 @@
       </div>
     </header>
     <main>
-      <section class="loading-info section hidden">
-        <div class="loading-info__preloader hidden">
-          <i class="loading-info__circle-preloader"></i>
-          <p class="loading-info__text">Идет поиск новостей...</p>
-        </div>
-        <div class="loading-info__not-found hidden">
-          <img src="<%=require('./images/not-found_v1.png')%>" class="loading-info__img" alt="Ничего не найдено">
-          <h3 class="title loading-info__title">Ничего не найдено</h3>
-          <p class="loading-info__text">К сожалению по вашему запросу ничего не найдено.</p>
-        </div>
-      </section>
+      <div class="preloader hidden">
+        <i class="preloader__circle"></i>
+        <p class="preloader__text">Идет поиск новостей...</p>
+      </div>
+      <div class="nothing-found hidden">
+        <img src="<%=require('./images/not-found_v1.png')%>" class="nothing-found__img" alt="Ничего не найдено">
+        <h3 class="title nothing-found__title">Ничего не найдено</h3>
+        <p class="nothing-found__text">К сожалению по вашему запросу ничего не найдено.</p>
+      </div>
       <section class="search-results section hidden">
         <div class="search-results__header">
           <h2 class="title search-results__title">Результаты поиска</h2>

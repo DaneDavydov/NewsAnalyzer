@@ -1,4 +1,4 @@
-.loading-info__text {
+.nothing-found__text {
   font-size: 18px;
   line-height: 24px;
   text-align: center;
@@ -6,7 +6,3 @@
   max-width: 344px;
   margin: 38px auto 0 auto;
 }
-
-/*.loading-info__text:last-child {*/
-/*  margin: 18px auto 0 auto;*/
-/*}*/
