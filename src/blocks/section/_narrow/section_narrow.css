@@ -1,0 +1,4 @@
+.section_narrow {
+  max-width: calc(100% - 208px);
+  padding: 0;
+}
