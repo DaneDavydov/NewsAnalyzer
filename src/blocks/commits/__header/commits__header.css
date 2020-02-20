@@ -3,5 +3,7 @@
   align-items: center;
   justify-content: space-between;
   width: calc(100% - 208px);
-  margin: 80px auto 64px;
+  padding-top: 72px;
+  padding-bottom: 64px;
+  margin: 0 auto;
 }
