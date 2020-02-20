@@ -22,7 +22,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 88px;
+  width: 200px;
   height: 100%;
   background: linear-gradient(270deg, rgba(245, 246, 247, 0) 0%, #F5F6F7 100%);
 }
@@ -33,7 +33,7 @@
   position: absolute;
   top: 0;
   right: 0;
-  width: 88px;
+  width: 200px;
   height: 100%;
   background: linear-gradient(90deg, rgba(245, 246, 247, 0) 0%, #F5F6F7 100%);
 }
