@@ -7,4 +7,5 @@
 
 .chart__bar:hover {
   fill: red;
+  cursor: pointer;
 }
