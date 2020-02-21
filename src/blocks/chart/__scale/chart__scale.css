@@ -1,0 +1,11 @@
+.chart__scale {
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 16px;  
+  letter-spacing: 0.4px;
+  text-transform: uppercase;  
+  color: #B6BCBF;
+  padding: 16px 0 10px 104px;
+  display: flex;
+  justify-content: space-between;
+}

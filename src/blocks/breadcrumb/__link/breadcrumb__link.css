@@ -1,0 +1,9 @@
+.breadcrumb__link {
+  color: #1A1B22;
+  text-decoration: none;
+}
+
+.breadcrumb__link:hover {
+  color: rgba(0, 0, 0, 0.486);
+  transition: 0.3s linear;
+}

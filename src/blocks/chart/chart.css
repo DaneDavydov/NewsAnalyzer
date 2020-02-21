@@ -1,0 +1,14 @@
+@import url("__title/chart__title.css");
+@import url("__table/chart__table.css");
+@import url("__bar/chart__bar.css");
+@import url("__bar-text/chart__bar-text.css");
+@import url("__date/chart__date.css");
+@import url("__header/chart__header.css");
+@import url("__header-text/chart__header-text.css");
+@import url("__month/chart__month.css");
+@import url("__scale/chart__scale.css");
+
+.chart {
+  background: #F5F6F7;
+  padding: 80px 104px 74px 104px;
+}

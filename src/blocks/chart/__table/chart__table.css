@@ -1,0 +1,5 @@
+.chart__table {
+  display: grid;
+  grid-template-columns: 104px 1fr;
+  grid-template-rows: repeat(6, 80px) 24px;
+}
