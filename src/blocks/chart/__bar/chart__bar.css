@@ -4,3 +4,7 @@
   -webkit-transition: fill .3s ease;
   transition: fill .3s ease;
 }
+
+.chart__bar:hover {
+  fill: red;
+}
