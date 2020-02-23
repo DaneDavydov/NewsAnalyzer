@@ -8,3 +8,16 @@
   color: #FFFFFF;
   margin-left: 104px;
 }
+
+@media (max-width: 575px) {
+  .header__logo {
+    margin-left: 16px;
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 991px) {
+  .header__logo {
+    margin-left: 40px;
+  }
+}

@@ -3,3 +3,17 @@
   justify-content: space-between;
   padding: 80px 176px 82px 104px;
 }
+
+@media (max-width: 575px) {
+  .technologies__wrapper {
+    padding: 32px 16px 38px 16px;
+    flex-direction: column;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 991px) {
+  .technologies__wrapper {
+    flex-wrap: wrap;
+    padding: 40px 71px 40px 40px;
+  }
+}

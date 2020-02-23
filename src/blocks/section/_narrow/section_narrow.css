@@ -1,4 +1,18 @@
-.section_narrow {
-  max-width: calc(100% - 208px);
-  padding: 0;
+@media (max-width: 575px) {
+  .section_narrow {
+    width: calc(100% - 32px);
+  }
+}
+
+@media (min-width: 576px) and (max-width: 991px) {
+  .section_narrow {
+    width: calc(100% - 80px);
+  }
+}
+
+@media (min-width: 992px) {
+  .section_narrow {
+    max-width: calc(100% - 208px);
+    padding: 0;
+  }
 }

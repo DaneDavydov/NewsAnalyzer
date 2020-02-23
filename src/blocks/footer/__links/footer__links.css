@@ -8,3 +8,11 @@
   justify-content: space-between;
   width: 406px;
 }
+
+@media screen and (max-width: 767px) {
+  .footer__links {
+    padding: 0;
+    display: block;
+    width: 100%;
+  }
+}

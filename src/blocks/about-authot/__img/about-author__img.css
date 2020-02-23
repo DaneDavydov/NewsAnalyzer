@@ -1,3 +1,29 @@
 .about-author__img {
   border-radius: 1000px;
+  height: 100%;
+  width: auto;
+}
+
+@media (max-width: 575px) {
+  .about-author__img {
+    height: 272px;
+    width: 272px;
+    margin-bottom: 24px;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 991px) {
+  .about-author__img {
+    height: 232px;
+    width: 232px;
+    margin-top: 20px;
+    margin-bottom: 24px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .about-author__img {
+    height: 50%;
+    width: 50%;
+  }
 }

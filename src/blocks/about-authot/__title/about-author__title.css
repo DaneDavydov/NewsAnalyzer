@@ -4,3 +4,11 @@
   line-height: 46px;
   margin-bottom: 0;
 }
+
+@media screen and (max-width: 991px) {
+  .about-author__title {
+    font-size: 30px;
+    line-height: 40px;
+    margin: 0 0 16px 0;
+  }
+}

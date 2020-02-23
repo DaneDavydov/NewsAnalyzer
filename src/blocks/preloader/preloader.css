@@ -1,5 +1,5 @@
-@import url("__circle/preloader__circle.css");
-@import url("__text/preloader__text.css");
+@import url(__circle/preloader__circle.css);
+@import url(__text/preloader__text.css);
 
 .preloader {
   padding: 81px 0;

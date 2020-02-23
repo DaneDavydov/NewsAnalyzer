@@ -3,3 +3,21 @@
   margin-top: 20px;
   margin-left: 56px;
 }
+
+@media (max-width: 575px) {
+  .about-author__content {
+    margin: 0;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+  .about-author__content {
+    margin: 0;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .about-author__content {
+    margin: 0 0 0 32px;
+  }
+}

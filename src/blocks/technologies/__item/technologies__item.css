@@ -1,3 +1,25 @@
 .technologies__item {
   margin-right: 39px;
 }
+
+.technologies__item:last-of-type {
+  margin-right: 0;
+}
+
+@media (max-width: 575px) {
+  .technologies__item {
+    margin-right: 0;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+  .technologies__item {
+    margin-right: 0;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .technologies__item {
+    margin-right: 60px;
+  }
+}
