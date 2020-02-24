@@ -30,10 +30,7 @@
       <h2 class="header__subtitle">Введите в поиске любую тему и узнайте, насколько популярной она была в новостях за
         прошедшую неделю.</h2>
       <form class="search" novalidate>
-        <label>
-          <input class="search__input" name="search-input" type="text" placeholder="Введите тему новости" pattern=".{2,}"
-                 required>
-        </label>
+        <input class="search__input" name="search-input" type="text" placeholder="Введите тему новости" required>
         <button class="search__button">Искать</button>
       </form>
     </div>
@@ -132,7 +129,7 @@
       </div>
       <button class="search-results__more-button">Показать еще</button>
     </section>
-    <section class="about-author section section_narrow">
+    <section class="about-author section_narrow">
       <img src="<%=require('./images/about-author.png')%>" alt="author photo" class="about-author__img">
       <div class="about-author__content">
         <h2 class="title about-author__title">Об авторе</h2>

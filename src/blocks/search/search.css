@@ -6,3 +6,16 @@
   margin: 64px auto;
   display: flex;
 }
+
+@media (max-width: 575px) {
+  .search {
+  flex-direction: column;
+    margin: 64px auto 32px auto;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 991px) {
+  .search {
+    margin: 24px auto 0 auto;
+  }
+}

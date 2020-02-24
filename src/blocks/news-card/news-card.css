@@ -14,3 +14,17 @@
   overflow: hidden;
   position: relative;
 }
+
+@media (max-width: 575px) {
+  .news-card {
+    width: 288px;
+    height: 446px;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 991px) {
+  .news-card {
+    width: 224px;
+    height: 420px;
+  }
+}

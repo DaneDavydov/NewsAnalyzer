@@ -11,3 +11,19 @@
   padding-left: 24px;
   padding-right: 168px;
 }
+
+@media (max-width: 575px) {
+  .search__input {
+    width: 288px;
+    height: 56px;
+    margin-bottom: 16px;
+    padding-right: 28px;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 991px) {
+  .search__input {
+    width: 448px;
+    height: 56px;
+  }
+}

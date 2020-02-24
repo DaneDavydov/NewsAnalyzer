@@ -17,3 +17,17 @@
 .search__button:hover {
   background: #347EFF;
 }
+
+@media (max-width: 575px) {
+  .search__button {
+    width: 288px;
+    margin: auto;
+    height: 56px;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 991px) {
+  .search__button {
+    height: 56px;
+  }
+}

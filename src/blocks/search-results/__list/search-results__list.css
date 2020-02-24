@@ -1,6 +1,20 @@
 .search-results__list {
   display: grid;
-  grid-template-columns: repeat(auto-fill,400px);
+  grid-template-columns: repeat(auto-fill, 400px);
   grid-gap: 18px 18px;
   justify-content: center;
+}
+
+@media (max-width: 575px) {
+  .search-results__list {
+    grid-template-columns: repeat(auto-fill, 288px);
+    grid-gap: 8px;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 991px) {
+  .search-results__list {
+    grid-template-columns: repeat(auto-fill, 224px);
+    grid-gap: 8px 8px;
+  }
 }
