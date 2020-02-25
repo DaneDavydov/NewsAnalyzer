@@ -130,7 +130,12 @@
       <button class="search-results__more-button">Показать еще</button>
     </section>
     <section class="about-author section_narrow">
-      <img src="<%=require('./images/about-author.png')%>" alt="author photo" class="about-author__img">
+      <picture>
+        <source srcset="<%=require('./images/about-author-mobile.png')%>" type="image/png" media="(max-width: 575px)">
+        <source srcset="<%=require('./images/about-author-tablet.png')%>" type="image/png" media="(max-width: 991px)">
+        <source srcset="<%=require('./images/about-author-laptop.png')%>" type="image/png" media="(max-width: 1191px)">
+        <img src="<%=require('./images/about-author.png')%>" alt="author photo" class="about-author__img">
+      </picture>
       <div class="about-author__content">
         <h2 class="title about-author__title">Об авторе</h2>
         <p class="about-author__paragraph">Это блок с описанием автора проекта. Здесь следует указать, как вас зовут,
