@@ -1,0 +1,15 @@
+.header__subtitle {
+  font-size: 18px;
+  font-weight: normal;
+  line-height: 24px;
+  margin: 32px auto 0 0;
+  max-width: 545px;
+}
+
+@media (max-width: 575px) {
+  .header__subtitle {
+    font-size: 20px;
+    line-height: 26px;
+    margin: 16px auto 0 0;
+  }
+}

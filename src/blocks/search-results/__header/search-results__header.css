@@ -1,0 +1,22 @@
+.search-results__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: calc(100% - 208px);
+  margin: 80px auto 64px;
+}
+
+@media (max-width: 575px) {
+  .search-results__header  {
+    width: calc(100% - 32px);
+    flex-direction: column;
+    align-items: start;
+    margin: 32px auto 36px;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 991px) {
+  .search-results__header  {
+    width: calc(100% - 80px);
+  }
+}

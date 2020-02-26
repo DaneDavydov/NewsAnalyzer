@@ -1,0 +1,8 @@
+.breadcrumb__item_active {
+  color: #B6BCBF;
+}
+
+.breadcrumb__item_active:before {
+  content: '/';
+  margin: 0 4px;
+}

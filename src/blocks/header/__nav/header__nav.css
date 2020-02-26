@@ -1,0 +1,17 @@
+.header__nav {
+  font-weight: 500;
+  margin-right: 101px;
+  margin-top: 4px;
+}
+
+@media (max-width: 575px) {
+  .header__nav {
+    margin-right: 14px;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 991px) {
+  .header__nav {
+    margin-right: 42px;
+  }
+}

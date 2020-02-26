@@ -1,0 +1,9 @@
+.news-card__description {
+  padding: 16px 24px;
+}
+
+@media screen and (max-width: 991px) {
+  .news-card__description {
+    padding: 16px 16px;
+  }
+}

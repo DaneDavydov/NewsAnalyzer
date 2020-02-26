@@ -1,0 +1,5 @@
+@media screen and (max-width: 767px) {
+  .footer__item {
+    margin-bottom: 30px;
+  }
+}

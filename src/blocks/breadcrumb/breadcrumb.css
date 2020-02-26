@@ -1,0 +1,18 @@
+@import url(__item/breadcrumb__item.css);
+@import url(__link/breadcrumb__link.css);
+@import url(__item/_active/breadcrumb__item_active.css);
+
+.breadcrumb {
+  list-style-type: none;
+  font-size: 18px;
+  line-height: 24px;
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
+
+@media (max-width: 575px) {
+  .breadcrumb {
+    display: none;
+  }
+}

@@ -1,0 +1,9 @@
+.header__item:first-of-type {
+  margin-right: 31px;
+}
+
+@media (max-width: 575px) {
+  .header__item:first-of-type {
+    margin-right: 11px;
+  }
+}

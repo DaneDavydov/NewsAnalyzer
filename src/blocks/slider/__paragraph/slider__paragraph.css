@@ -1,0 +1,13 @@
+.slider__paragraph {
+  width: 352px;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+  margin: 0;
+}
+
+@media (max-width: 575px) {
+  .slider__paragraph {
+    width: 240px;
+  }
+}

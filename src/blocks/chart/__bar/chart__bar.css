@@ -1,0 +1,11 @@
+.chart__bar {
+  fill: #2F71E5;
+  height: 21px;
+  -webkit-transition: fill .3s ease;
+  transition: fill .3s ease;
+}
+
+.chart__bar:hover {
+  fill: red;
+  cursor: pointer;
+}

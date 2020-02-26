@@ -1,0 +1,10 @@
+.slider__carousel {
+  width: 100%;
+  margin: 0 auto;
+}
+
+@media (max-width: 575px) {
+  .slider__carousel {
+    margin-bottom: 100px;
+  }
+}

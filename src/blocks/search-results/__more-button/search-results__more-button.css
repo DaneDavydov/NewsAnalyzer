@@ -1,0 +1,28 @@
+.search-results__more-button {
+  background-color: #FFFFFF;
+  border-radius: 80px;
+  border: none;
+  width: 288px;
+  height: 64px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  margin: 62px auto 78px auto;
+}
+
+.search-results__more-button:hover {
+  background-color: rgba(232, 232, 233, 0.993);
+  cursor: pointer;
+}
+
+@media (max-width: 575px) {
+  .search-results__more-button {
+    margin: 13px auto 44px auto;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 991px) {
+  .search-results__more-button {
+    margin: 22px auto 40px auto;
+  }
+}

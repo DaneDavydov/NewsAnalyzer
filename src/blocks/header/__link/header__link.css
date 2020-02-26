@@ -1,0 +1,8 @@
+.header__link {
+  color: #B6BCBF;
+}
+
+.header__link:hover {
+  color: #FFFFFF;
+  transition: 0.3s linear;
+}

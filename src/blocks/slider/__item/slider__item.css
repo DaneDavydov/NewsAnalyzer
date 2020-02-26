@@ -1,0 +1,23 @@
+.slider__item {
+  width: 400px;
+  height: 288px;
+  background: #FFFFFF;
+  border-radius: 16px;
+  padding: 24px;
+  margin-right: 10px;
+}
+
+@media (max-width: 575px) {
+  .slider__item {
+    width: 248px;
+    height: 264px;
+    margin-right: 5px;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 991px) {
+  .slider__item {
+    width: 336px;
+    height: 242px;
+  }
+}

@@ -1,0 +1,17 @@
+.commits__link {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  transition: opacity .3s linear;
+}
+
+.commits__link:hover {
+  opacity: 0.6;
+}
+
+@media (max-width: 575px) {
+  .commits__link {
+    display: none;
+  }
+}

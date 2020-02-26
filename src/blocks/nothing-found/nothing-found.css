@@ -1,0 +1,12 @@
+@import url(__title/nothing-found__title.css);
+@import url(__img/nothing-found__img.css);
+@import url(__text/nothing-found__text.css);
+
+.nothing-found {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #F5F6F7;
+  padding: 80px 0 86px;
+}

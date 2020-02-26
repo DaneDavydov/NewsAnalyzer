@@ -1,0 +1,26 @@
+.news-card__source {
+  color: #B6BCBF;
+  font-family: Roboto Slab, 'Helvetica Neue', Arial, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: .4px;
+  text-transform: uppercase;
+  position: absolute;
+  bottom: 24px;
+  padding: 0;
+  margin: 0;
+}
+
+@media (max-width: 575px) {
+  .news-card__source {
+    bottom: 20px;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 991px) {
+  .news-card__source {
+    bottom: 16px;
+  }
+}

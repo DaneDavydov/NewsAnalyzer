@@ -1,0 +1,22 @@
+@import url(__title/to-clients__title.css);
+@import url(__paragraph/to-clietns__paragraph.css);
+
+.to-clients {
+  margin: 0 auto;
+  padding-top: 80px;
+  padding-bottom: 74px;
+}
+
+@media (max-width: 575px) {
+  .to-clients {
+    padding-top: 16px;
+    padding-bottom: 30px;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 991px) {
+  .to-clients {
+    padding-top: 30px;
+    padding-bottom: 26px;
+  }
+}

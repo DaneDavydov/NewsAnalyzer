@@ -1,0 +1,13 @@
+.chart__header {
+  border-bottom: 2px solid #87888c;
+  display: grid;
+  grid-template-columns: 104px 1fr;
+  padding-top: 45px;
+  padding-bottom: 14px;
+}
+
+@media (max-width: 575px) {
+  .chart__header {
+    grid-template-columns: 96px 1fr;
+  }
+}

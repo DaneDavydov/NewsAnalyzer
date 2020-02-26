@@ -1,0 +1,25 @@
+@import url(__item/analytics__item.css);
+@import url(__title/analytics__title.css);
+@import url(__mentioned-in-titles/analytics__mentioned-in-titles.css);
+@import url(__topic/analytics__topic.css);
+@import url(__weekly-news/analytics__weekly-news.css);
+
+.analytics {
+  margin: 0 auto;
+  padding-top: 40px;
+  padding-bottom: 76px;
+}
+
+@media (max-width: 575px) {
+  .analytics {
+    padding-top: 0;
+    padding-bottom: 24px;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 991px) {
+  .analytics {
+    padding-top: 32px;
+    padding-bottom: 40px;
+  }
+}

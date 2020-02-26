@@ -1,0 +1,8 @@
+.chart__bar-text {
+  fill: #FFFFFF;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: .4px;
+  text-transform: uppercase;
+}
