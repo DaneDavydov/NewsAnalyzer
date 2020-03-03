@@ -1,18 +1,28 @@
 export default class CommitCard {
   constructor() {}
-  createCommitCard(name, email, date, message, avatar) {
-    return `
-      <div class="slider__item">
-        <div class="slider__date">${date}</div>
-        <div class="slider__content">
-          <img class="slider__avatar" src="${avatar}" alt="аватар">
-          <div class="slider__text">
-            <h4 class="slider__author title">${name}</h4>
-            <p class="slider__email">${email}</p>
-          </div>
-        </div>
-        <p class="slider__paragraph">${message}</p>
-      </div>
-    `;
+
+  createCard(data) {
+    this.data = data;
+    const sliderItem = document.querySelector('#sliderItem').content;
+    sliderItem.querySelector('.slider__date').textContent = this.data.commit.committer.date;
+    sliderItem.querySelector('.slider__avatar').src = this.data.author.avatar_url;
+    sliderItem.querySelector('.slider__author').textContent = this.data.commit.author.name;
+    sliderItem.querySelector('.slider__email').textContent = this.data.commit.author.email;
+    sliderItem.querySelector('.slider__paragraph').textContent = this.data.commit.message;
+    return sliderItem.cloneNode(true);
   }
 }
+
+// export default class CommitCard {
+//   constructor() {}
+
+//   createCard(name, email, date, message, avatar) {
+//     const sliderItem = document.querySelector('#sliderItem').content;
+//     sliderItem.querySelector('.slider__date').textContent = date;
+//     sliderItem.querySelector('.slider__avatar').src = avatar;
+//     sliderItem.querySelector('.slider__author').textContent = name;
+//     sliderItem.querySelector('.slider__email').textContent = email;
+//     sliderItem.querySelector('.slider__paragraph').textContent = message;
+//     return sliderItem.cloneNode(true);
+//   }
+// }
