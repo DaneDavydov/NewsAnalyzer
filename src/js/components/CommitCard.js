@@ -1,10 +1,12 @@
+import dateGit from '../utils/date'
+
 export default class CommitCard {
   constructor() {}
 
   createCard(data) {
     this.data = data;
     const sliderItem = document.querySelector('#sliderItem').content;
-    sliderItem.querySelector('.slider__date').textContent = this.data.commit.committer.date;
+    sliderItem.querySelector('.slider__date').textContent = dateGit(this.data.commit.committer.date);
     sliderItem.querySelector('.slider__avatar').src = this.data.author.avatar_url;
     sliderItem.querySelector('.slider__author').textContent = this.data.commit.author.name;
     sliderItem.querySelector('.slider__email').textContent = this.data.commit.author.email;
