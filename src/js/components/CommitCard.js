@@ -4,13 +4,12 @@ export default class CommitCard {
   constructor() {}
 
   createCard(data) {
-    this.data = data;
     const sliderItem = document.querySelector('#sliderItem').content;
-    sliderItem.querySelector('.slider__date').textContent = dateGit(this.data.commit.committer.date);
-    sliderItem.querySelector('.slider__avatar').src = this.data.author.avatar_url;
-    sliderItem.querySelector('.slider__author').textContent = this.data.commit.author.name;
-    sliderItem.querySelector('.slider__email').textContent = this.data.commit.author.email;
-    sliderItem.querySelector('.slider__paragraph').textContent = this.data.commit.message;
+    sliderItem.querySelector('.slider__date').textContent = dateGit(data.commit.committer.date);
+    sliderItem.querySelector('.slider__avatar').src = data.author.avatar_url;
+    sliderItem.querySelector('.slider__author').textContent = data.commit.author.name;
+    sliderItem.querySelector('.slider__email').textContent = data.commit.author.email;
+    sliderItem.querySelector('.slider__paragraph').textContent = data.commit.message;
     return sliderItem.cloneNode(true);
   }
 }
