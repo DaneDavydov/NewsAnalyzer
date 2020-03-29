@@ -1,28 +1,26 @@
+@import url(./_submit/search__button_submit.css);
+
 .search__button {
-  background: #2F71E5;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: #d5d5e5;
   box-shadow: 0 5px 15px rgba(14, 26, 57, 0.2);
   border-radius: 100px;
   border: none;
   width: 168px;
   height: 64px;
-  margin-left: -168px;
   color: #FFFFFF;
   font-weight: 500;
   font-size: 18px;
   line-height: 24px;
-  z-index: 1;
-  cursor: pointer;
-}
-
-.search__button:hover {
-  background: #347EFF;
 }
 
 @media (max-width: 575px) {
   .search__button {
-    width: 288px;
-    margin: auto;
+    width: 100%;
     height: 56px;
+    position: static;
   }
 }
 

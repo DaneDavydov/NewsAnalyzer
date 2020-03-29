@@ -1,5 +1,6 @@
 .news-card__image {
-  height: auto;
+  height: 40%;
+  object-fit: cover;
   width: 100%;
   margin: 0;
 }
