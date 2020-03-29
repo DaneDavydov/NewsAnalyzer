@@ -4,7 +4,7 @@ import NewsCardList from '../js/components/NewsCardList';
 import NewsApi from '../js/modules/NewsApi';
 import {NEWS_API_URL, NEWS_API_KEY} from '../js/constants/constants';
 import SearchInput from '../js/components/SearchInput';
-import MoreButton from '../js//components/MoreButton';
+import MoreButton from './components/MoreButton';
 import SearchStatus from "./components/SearchStatus";
 
 const searchInput = document.querySelector(".search__input");
