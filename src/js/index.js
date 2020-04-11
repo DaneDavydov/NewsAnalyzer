@@ -26,16 +26,14 @@ const search = new SearchInput(searchInput, searchButton, searchError);
 const dataStorage = new DataStorage();
 const newsApi = new NewsApi(NEWS_API_URL, NEWS_API_KEY);
 const newsCard = new NewsCard();
-const newsCardsList = new NewsCardList(searchResultsList, newsCard);
+const newsCardsList = new NewsCardList(searchResultsList);
 const searchStatus = new SearchStatus(preloader, nothingFound, serverError);
 const moreButton = new MoreButton(searchResultsMoreButton, () => render());
 
 function render() {
   const data = news.splice(0, NEWS_FOR_RENDERING); // отрисовываем 3 новости и удаляем их
-  for (let i = 0; i < NEWS_FOR_RENDERING; i++) {
-    newsCardsList.addCard(data[i])
-  }
-  if (news.length) {
+  data.forEach(item => newsCardsList.addCard(newsCard.createCard(item)));
+  if (news.length > 0) {
     moreButton.show();
   } else {
     moreButton.hide();

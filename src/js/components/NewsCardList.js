@@ -1,11 +1,9 @@
 export default class NewsCardList {
-  constructor(container, cardTemplate) {
+  constructor(container) {
     this._container = container;
-    this._cardTemplate = cardTemplate;
   }
 
-  addCard(data) {
-    const card = this._cardTemplate.createCard(data);
+  addCard(card) {
     this._container.append(card);
   }
 
