@@ -2,10 +2,15 @@ import '../pages/index.css';
 import NewsCard from '../js/components/NewsCard';
 import NewsCardList from '../js/components/NewsCardList';
 import NewsApi from '../js/modules/NewsApi';
-import {NEWS_API_URL, NEWS_API_KEY} from '../js/constants/constants';
+import {
+  NEWS_API_URL,
+  NEWS_API_KEY
+} from '../js/constants/constants';
 import SearchInput from '../js/components/SearchInput';
 import MoreButton from './components/MoreButton';
 import SearchStatus from "./components/SearchStatus";
+import DataStorage from '../js/modules/DataStorage';
+import {NEWS_FOR_RENDERING} from "../js/constants/constants";
 
 const searchInput = document.querySelector(".search__input");
 const searchButton = document.querySelector(".search__button");
@@ -16,22 +21,21 @@ const searchResultsMoreButton = document.querySelector('.search-results__more-bu
 const preloader = document.querySelector('.preloader');
 const nothingFound = document.querySelector('.nothing-found');
 const serverError = document.querySelector('#server-error');
-
-const from = -7;
-const to = 0;
+let news;
 const search = new SearchInput(searchInput, searchButton, searchError);
-
-const newsApi = new NewsApi(NEWS_API_URL, NEWS_API_KEY, from, to);
+const dataStorage = new DataStorage();
+const newsApi = new NewsApi(NEWS_API_URL, NEWS_API_KEY);
 const newsCard = new NewsCard();
-const newsCardsList = new NewsCardList(searchResultsList);
-const moreButton = new MoreButton(searchResultsMoreButton, () => render());
+const newsCardsList = new NewsCardList(searchResultsList, newsCard);
 const searchStatus = new SearchStatus(preloader, nothingFound, serverError);
-let storage;
+const moreButton = new MoreButton(searchResultsMoreButton, () => render());
 
 function render() {
-  const data = storage.splice(0, 3); // отрисовываем 3 новости и удаляем их из массива
-  data.forEach(news => newsCardsList.addCard(newsCard.createCard(news)));
-  if (storage.length) {
+  const data = news.splice(0, NEWS_FOR_RENDERING); // отрисовываем 3 новости и удаляем их
+  for (let i = 0; i < NEWS_FOR_RENDERING; i++) {
+    newsCardsList.addCard(data[i])
+  }
+  if (news.length) {
     moreButton.show();
   } else {
     moreButton.hide();
@@ -45,7 +49,7 @@ function searchNews() {
     newsCardsList.deleteCard();
     searchResults.classList.add('hidden');
     moreButton.hide();
-    localStorage.clear();
+    dataStorage.clearStorage();
     newsApi.getNews(search.input.value)
         .then(res => {
           if (res.ok) {
@@ -53,11 +57,11 @@ function searchNews() {
           }
           return Promise.reject(res.status);
         })
-        .then(newsArray => {
-          localStorage.setItem('news', JSON.stringify(newsArray));
-          localStorage.setItem('keyword', search.input.value.trim());
-          storage = newsArray.articles;
-          if (storage.length > 0) {
+        .then(data => {
+          dataStorage.saveStorage(data);
+          localStorage.setItem('query', search.input.value.trim());
+          news = data.articles;
+          if (news.length > 0) {
             render();
             searchResults.classList.remove('hidden');
           } else {
@@ -79,11 +83,11 @@ searchButton.addEventListener('click', (event) => {
   searchNews();
 });
 
-if (localStorage.getItem('news')) {
-  storage = JSON.parse(localStorage.getItem('news')).articles;
-  search.input.value = localStorage.getItem('keyword');
+window.onload = () => {
+  news = dataStorage.loadData().articles;
+  search.input.value = localStorage.getItem('query');
   search.activateBtn();
   render();
-  (storage.length != 0) ? searchResults.classList.remove('hidden') : searchStatus.showEmpty();
+  (news.length != 0) ? searchResults.classList.remove('hidden') : searchStatus.showEmpty();
   searchError.classList.add('hidden');
-}
+};

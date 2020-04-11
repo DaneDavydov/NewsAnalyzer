@@ -14,16 +14,16 @@ const commitCard = new CommitCard();
 const sliderCarousel = document.querySelector('.slider__carousel');
 
 githubApi.getCommits()
-  .then(data => {
-    const commitCardList = new CommitCardList(sliderCarousel, data, commitCard);
-    commitCardList.render();
-    var flkty = new Flickity('.slider__carousel', {
-      cellAlign: 'center',
-      contain: true,
-      freeScroll: true,
-      wrapAround: true,
+    .then(data => {
+      const commitCardList = new CommitCardList(sliderCarousel, data, commitCard);
+      commitCardList.render();
+      var flkty = new Flickity('.slider__carousel', {
+        cellAlign: 'center',
+        contain: true,
+        freeScroll: true,
+        wrapAround: true,
+      })
     })
-  })
-  .catch((err) => {
-    console.log(err);
-  });
+    .catch((err) => {
+      console.log(err);
+    });

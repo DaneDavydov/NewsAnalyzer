@@ -1,33 +1,4 @@
-import date from '../utils/date'
-
-// export default class NewsCard {
-//   constructor() {}
-//
-//   createCard(data) {
-//     const newsCard = document.querySelector('#newsCard').content;
-//     newsCard.querySelector('.news-card__link').href = data.url;
-//     newsCard.querySelector('.news-card__image').src = data.urlToImage;
-//     newsCard.querySelector('.news-card__date').textContent = date(data.publishedAt);
-//     newsCard.querySelector('.news-card__title').textContent = data.title;
-//     newsCard.querySelector('.news-card__text').textContent = data.description;
-//     newsCard.querySelector('.news-card__source').textContent = data.source.name;
-//     return newsCard.cloneNode(true);
-//   }
-// }
-//
-//     <div class="news-card">
-//      <a class="news-card__link link" href="" target="_blank">
-//       <img class="news-card__image" alt="иллюстрация к новости" src="">
-//       <div class="news-card__description">
-//         <div class="news-card__date"></div>
-//          <h3 class="title news-card__title"></h3>
-//          <p class="news-card__text"></p>
-//          <p class="news-card__source"></p>
-//         </div>
-//      </a>
-//     </div>
-//
-
+import {date} from '../utils/date'
 
 export default class NewsCard {
   createCard(data) {
@@ -44,7 +15,7 @@ export default class NewsCard {
     img.classList.add('news-card__image');
     img.src = data.urlToImage;
     img.alt = 'иллюстрация к новости';
-    img.onerror = function() {
+    img.onerror = function () {
       img.src = '../../images/not-found_v1.png'; // Ошибка загрузки
     };
     link.appendChild(img);
@@ -76,3 +47,20 @@ export default class NewsCard {
     return newsCard;
   }
 }
+
+// export default class NewsCard {
+//   constructor() {
+//     // this.element = this.createCard(data);
+//   }
+//
+//   createCard(data) {
+//     const newsCard = document.querySelector('#newsCard').content;
+//     newsCard.querySelector('.news-card__link').href = data.url;
+//     newsCard.querySelector('.news-card__image').src = data.urlToImage;
+//     newsCard.querySelector('.news-card__date').textContent = date(data.publishedAt);
+//     newsCard.querySelector('.news-card__title').textContent = data.title;
+//     newsCard.querySelector('.news-card__text').textContent = data.description;
+//     newsCard.querySelector('.news-card__source').textContent = data.source.name;
+//     return newsCard.cloneNode(true);
+//   }
+// }

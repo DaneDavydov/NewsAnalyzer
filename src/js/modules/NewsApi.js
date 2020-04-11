@@ -1,19 +1,20 @@
+import {queryDate} from '../utils/date';
+import {REQUEST_DEPTH} from '../constants/constants'
+
 export default class NewsApi {
-  constructor(url, apiKey, from, to){
+  constructor(url, apiKey) {
     this._url = url;
     this._apiKey = apiKey;
-    this._from = from;
-    this._to = to;
   }
 
-  getNews(query){
+  getNews(query) {
     let date = new Date();
-    date.setDate(date.getDate() + this._from + 1); //возвращаем количество миллисекунд
-    const from = `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`; //преобразуем в нужный формат дату
+    date.setDate(date.getDate() - REQUEST_DEPTH);
+    const from = queryDate(date);
 
     date = new Date();
-    date.setDate(date.getDate() + this._to); //возвращаем количество миллисекунд
-    const to = `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`;  //преобразуем в нужный формат дату
+    date.setDate(date.getDate());
+    const to = queryDate(date);
 
     return fetch(`${this._url}q=${query}&from=${from}&to=${to}&language=ru&pageSize=100&apiKey=${this._apiKey}`)
   }

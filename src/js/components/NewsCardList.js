@@ -1,14 +1,16 @@
 export default class NewsCardList {
-  constructor(container){
+  constructor(container, cardTemplate) {
     this._container = container;
+    this._cardTemplate = cardTemplate;
   }
 
-  addCard(newsCard) {
-    this._container.appendChild(newsCard);
+  addCard(data) {
+    const card = this._cardTemplate.createCard(data);
+    this._container.append(card);
   }
 
   deleteCard() {
-    [...this._container.children].forEach(newsCard => newsCard.remove());
+    [...this._container.children].forEach(item => item.remove());
   }
 }
 
