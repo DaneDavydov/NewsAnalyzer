@@ -19,7 +19,8 @@
       <a href="index.html" class="header__logo">NewsAnalyzer</a>
       <nav class="header__nav">
         <ul class="header__links">
-          <li class="header__item"><a href="index.html" class="link header__link header__link_active-white">Главная</a>
+          <li class="header__item"><a href="index.html"
+                                      class="link header__link header__link_active-white">Главная</a>
           </li>
           <li class="header__item"><a href="about.html" class="link header__link">О проекте</a></li>
         </ul>
@@ -30,8 +31,9 @@
       <h2 class="header__subtitle">Введите в поиске любую тему и узнайте, насколько популярной она была в новостях за
         прошедшую неделю.</h2>
       <form class="search" novalidate>
-        <input class="search__input" name="search-input" type="text" placeholder="Введите тему новости" required>
-        <button class="search__button">Искать</button>
+        <input class="search__input" type="text" placeholder="Введите тему новости" required>
+        <button type="submit" class="search__button">Искать</button>
+        <span class="search__error">Введите текст запроса!</span>
       </form>
     </div>
   </header>
@@ -45,95 +47,40 @@
       <h3 class="title nothing-found__title">Ничего не найдено</h3>
       <p class="nothing-found__text">К сожалению по вашему запросу ничего не найдено.</p>
     </div>
+    <div class="nothing-found hidden" id="server-error">
+      <img src="<%=require('./images/not-found_v1.png')%>" class="nothing-found__img" alt="Ничего не найдено">
+      <h3 class="title nothing-found__title">Нет ответа сервера</h3>
+      <p class="nothing-found__text">К сожалению сервер не дал ответа</p>
+    </div>
     <section class="search-results section hidden">
       <div class="search-results__header">
         <h2 class="title search-results__title">Результаты поиска</h2>
-        <a href="./analytics.html" class="search-results__link link">Посмотреть аналитику <img
-          src="<%=require('./images/arrow.png')%>" alt="стрелка"></a>
+        <a href="./analytics.html" class="search-results__link link" target="_blank">Посмотреть аналитику <img
+            src="<%=require('./images/arrow.png')%>" alt="стрелка"></a>
       </div>
       <div class="search-results__list">
-        <div class="news-card">
-          <a class="news-card__link link" href="" target="_blank">
-            <img class="news-card__image" alt="иллюстрация к новости" src="<%=require('./images/card.png')%>">
-            <div class="news-card__description">
-              <div class="news-card__date">2 августа, 2019</div>
-              <h3 class="title news-card__title">Национальное достояние – парки</h3>
-              <p class="news-card__text">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь
-                начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый может
-                приобщиться к природе.</p>
-              <p class="news-card__source">Лента.ру</p>
-            </div>
-          </a>
-        </div>
-        <div class="news-card">
-          <a class="news-card__link link" href="" target="_blank">
-            <img class="news-card__image" alt="иллюстрация к новости" src="<%=require('./images/card.png')%>">
-            <div class="news-card__description">
-              <div class="news-card__date">2 августа, 2019</div>
-              <h3 class="title news-card__title">Лесные огоньки: история одной фотографии</h3>
-              <p class="news-card__text">Фотограф отвлеклась от освещения суровой политической реальности Мексики,
-                чтобы запечатлеть ускользающую красоту одного из местных чудес природы.</p>
-              <p class="news-card__source">Медуза</p>
-            </div>
-          </a>
-        </div>
-        <div class="news-card">
-          <a class="news-card__link link" href="" target="_blank">
-            <img class="news-card__image" alt="иллюстрация к новости" src="<%=require('./images/card.png')%>">
-            <div class="news-card__description">
-              <div class="news-card__date">2 августа, 2019</div>
-              <h3 class="title news-card__title">«Первозданная тайга»: новый фотопроект Игоря Шпиленка</h3>
-              <p class="news-card__text">Знаменитый фотограф снимает первозданные леса России, чтобы рассказать о
-                необходимости их сохранения. В этот раз он отправился в Двинско-Пинежскую тайгу, где...</p>
-              <p class="news-card__source">Риа</p>
-            </div>
-          </a>
-        </div>
-        <div class="news-card">
-          <a class="news-card__link link" href="" target="_blank">
-            <img class="news-card__image" alt="иллюстрация к новости" src="<%=require('./images/card.png')%>">
-            <div class="news-card__description">
-              <div class="news-card__date">2 августа, 2019</div>
-              <h3 class="title news-card__title">Национальное достояние – парки</h3>
-              <p class="news-card__text">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь
-                начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый может
-                приобщиться к природе.</p>
-              <p class="news-card__source">Лента.ру</p>
-            </div>
-          </a>
-        </div>
-        <div class="news-card">
-          <a class="news-card__link link" href="" target="_blank">
-            <img class="news-card__image" alt="иллюстрация к новости" src="<%=require('./images/card.png')%>">
-            <div class="news-card__description">
-              <div class="news-card__date">2 августа, 2019</div>
-              <h3 class="title news-card__title">Лесные огоньки: история одной фотографии</h3>
-              <p class="news-card__text">Фотограф отвлеклась от освещения суровой политической реальности Мексики,
-                чтобы запечатлеть ускользающую красоту одного из местных чудес природы.</p>
-              <p class="news-card__source">Медуза</p>
-            </div>
-          </a>
-        </div>
-        <div class="news-card">
-          <a class="news-card__link link" href="" target="_blank">
-            <img class="news-card__image" alt="иллюстрация к новости" src="<%=require('./images/card.png')%>">
-            <div class="news-card__description">
-              <div class="news-card__date">2 августа, 2019</div>
-              <h3 class="title news-card__title">«Первозданная тайга»: новый фотопроект Игоря Шпиленка</h3>
-              <p class="news-card__text">Знаменитый фотограф снимает первозданные леса России, чтобы рассказать о
-                необходимости их сохранения. В этот раз он отправился в Двинско-Пинежскую тайгу, где...</p>
-              <p class="news-card__source">Риа</p>
-            </div>
-          </a>
-        </div>
+        <template id="newsCard">
+          <div class="news-card">
+            <a class="news-card__link link" href="" target="_blank">
+              <img class="news-card__image" alt="иллюстрация к новости" src="">
+              <div class="news-card__description">
+                <div class="news-card__date"></div>
+                <h3 class="title news-card__title"></h3>
+                <p class="news-card__text"></p>
+                <p class="news-card__source"></p>
+              </div>
+            </a>
+          </div>
+        </template>
       </div>
-      <button class="search-results__more-button">Показать еще</button>
+      <button class="search-results__more-button hidden">Показать еще</button>
     </section>
     <section class="about-author section_narrow">
       <picture>
         <source srcset="<%=require('./images/about-author-mobile.png')%>" type="image/png" media="(max-width: 575px)">
         <source srcset="<%=require('./images/about-author-tablet.png')%>" type="image/png" media="(max-width: 991px)">
-        <source srcset="<%=require('./images/about-author-laptop.png')%>" type="image/png" media="(max-width: 1191px)">
+        <source srcset="<%=require('./images/about-author-laptop.png')%>" type="image/png"
+                media="(max-width: 1191px)">
         <img src="<%=require('./images/about-author.png')%>" alt="author photo" class="about-author__img">
       </picture>
       <div class="about-author__content">
@@ -151,16 +98,17 @@
       <ul class="footer__links">
         <li class="footer__item"><a href="index.html" class="link footer__link">Главная</a></li>
         <li class="footer__item"><a href="about.html" class="link footer__link">О проекте</a></li>
-        <li class="footer__item"><a href="https://praktikum.yandex.ru/" class="link footer__link" target="_blank">Яндекс.Практикум</a>
+        <li class="footer__item"><a href="https://praktikum.yandex.ru/" class="link footer__link"
+                                    target="_blank">Яндекс.Практикум</a>
         </li>
       </ul>
     </nav>
     <nav>
       <ul class="footer__social">
         <li class="footer__social-item"><a href="https://github.com/DaneDavydov" target="_blank"><img
-          src="<%=require('./images/github.svg')%>" alt="GitHub"></a></li>
+            src="<%=require('./images/github.svg')%>" alt="GitHub"></a></li>
         <li class="footer__social-item"><a href="https://www.facebook.com/" target="_blank"><img
-          src="<%=require('./images/facebook.svg')%>" alt="Facebook"></a></li>
+            src="<%=require('./images/facebook.svg')%>" alt="Facebook"></a></li>
       </ul>
     </nav>
   </footer>

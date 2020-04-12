@@ -1,3 +1,8 @@
 .search__button_submit {
-  background: #2A65CC;
+  background: #2F71E5;
+  cursor: pointer;
+}
+
+.search__button_submit:hover{
+  background: #347EFF;
 }

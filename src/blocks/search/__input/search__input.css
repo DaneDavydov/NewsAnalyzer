@@ -1,5 +1,5 @@
 .search__input {
-  width: 608px;
+  width: inherit;
   height: 64px;
   background: #FFFFFF;
   border: 1px solid #D1D2D6;
@@ -8,22 +8,22 @@
   font-size: 16px;
   line-height: 22px;
   color: #1A1B22;
+  padding-top: 21px;
+  padding-bottom: 21px;
   padding-left: 24px;
-  padding-right: 168px;
 }
 
 @media (max-width: 575px) {
   .search__input {
-    width: 288px;
     height: 56px;
     margin-bottom: 16px;
-    padding-right: 28px;
   }
 }
 
 @media (min-width: 576px) and (max-width: 991px) {
   .search__input {
-    width: 448px;
     height: 56px;
   }
 }
+
+
