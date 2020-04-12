@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Denis Davydov">
+  <meta name="description" content="News Analyzer">
+  <meta name="keywords" content="HTML, CSS, JavaScript, Yandex Praktikum">
+  <link rel="stylesheet" href="./styles/analytics.a7f205a4fa245608b57f.css">
+  <link rel="shortcut icon" href="./images/favicon.png" type="image/png">
+  <title>Analytics | News Analyzer</title>
+</head>
+
+<body>
+<div class="page">
+  <header class="header section">
+    <div class="header__wrap header__wrap_black">
+      <a href="index.html" class="header__logo header__logo_black">NewsAnalyzer</a>
+      <nav class="header__nav">
+        <ul class="header__links">
+          <li class="header__item"><a href="index.html" class="link header__link_black">Главная</a></li>
+          <li class="header__item"><a href="about.html" class="link header__link_black">О проекте</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="analytics section_narrow">
+      <nav>
+        <ul class="breadcrumb">
+          <li class="breadcrumb__item"><a href="./index.html" class="link breadcrumb__link">Главная</a></li>
+          <li class="breadcrumb__item breadcrumb__item_active">Аналитика</li>
+        </ul>
+      </nav>
+      <h1 class="title analytics__title">Вы спросили: <span class="analytics__topic"></span></h1>
+      <div class="analytics__item">Новостей за неделю: <span class="analytics__weekly-news"></span></div>
+      <div class="analytics__item">Упоминаний в загаловках: <span class="analytics__mentioned-in-titles"></span>
+      </div>
+    </section>
+    <section class="chart">
+      <h2 class="title chart__title">Аналитика по дням</h2>
+      <div class="chart__header">
+        <div class="chart__header-text">Дата <span class="chart__month"></span></div>
+        <div class="chart__header-text">Кол-во упоминаний</div>
+      </div>
+      <div class="chart__scale">
+        <div>0</div>
+        <div>25</div>
+        <div>50</div>
+        <div>75</div>
+        <div>100</div>
+      </div>
+      <div class="chart__table">
+
+      </div>
+      <div class="chart__scale">
+        <div>0</div>
+        <div>25</div>
+        <div>50</div>
+        <div>75</div>
+        <div>100</div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer section_narrow">
+    <p class="footer__copyright">&copy; Supersite</p>
+    <nav>
+      <ul class="footer__links">
+        <li class="footer__item"><a href="index.html" class="link footer__link">Главная</a></li>
+        <li class="footer__item"><a href="about.html" class="link footer__link">О проекте</a></li>
+        <li class="footer__item"><a href="https://praktikum.yandex.ru/" class="link footer__link" target="_blank">Яндекс.Практикум</a>
+        </li>
+      </ul>
+    </nav>
+    <nav>
+      <ul class="footer__social">
+        <li class="footer__social-item"><a href="https://github.com/DaneDavydov" target="_blank"><img
+          src="./images/github.svg" alt="GitHub"></a></li>
+        <li class="footer__social-item"><a href="https://www.facebook.com/" target="_blank"><img
+          src="./images/facebook.svg" alt="Facebook"></a></li>
+      </ul>
+    </nav>
+  </footer>
+</div>
+<script src="./scripts/analytics.77cc20b173e29e90a9b3.js"></script>
+</body>
+
+</html>

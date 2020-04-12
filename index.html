@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Denis Davydov">
+  <meta name="description" content="News Analyzer">
+  <meta name="keywords" content="HTML, CSS, JavaScript, Yandex Praktikum">
+  <link rel="stylesheet" href="./styles/main.34b66816cc5c222e4966.css">
+  <link rel="shortcut icon" href="./images/favicon.png" type="image/png">
+  <title>News Analyzer</title>
+</head>
+
+<body>
+<div class="page">
+  <header class="header header_bg section">
+    <div class="header__wrap">
+      <a href="index.html" class="header__logo">NewsAnalyzer</a>
+      <nav class="header__nav">
+        <ul class="header__links">
+          <li class="header__item"><a href="index.html"
+                                      class="link header__link header__link_active-white">Главная</a>
+          </li>
+          <li class="header__item"><a href="about.html" class="link header__link">О проекте</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="header__content">
+      <h1 class="title header__title">Что в мире творится?</h1>
+      <h2 class="header__subtitle">Введите в поиске любую тему и узнайте, насколько популярной она была в новостях за
+        прошедшую неделю.</h2>
+      <form class="search" novalidate>
+        <input class="search__input" type="text" placeholder="Введите тему новости" required>
+        <button type="submit" class="search__button">Искать</button>
+        <span class="search__error">Введите текст запроса!</span>
+      </form>
+    </div>
+  </header>
+  <main>
+    <div class="preloader hidden">
+      <i class="preloader__circle"></i>
+      <p class="preloader__text">Идет поиск новостей...</p>
+    </div>
+    <div class="nothing-found hidden">
+      <img src="./images/not-found_v1.png" class="nothing-found__img" alt="Ничего не найдено">
+      <h3 class="title nothing-found__title">Ничего не найдено</h3>
+      <p class="nothing-found__text">К сожалению по вашему запросу ничего не найдено.</p>
+    </div>
+    <div class="nothing-found hidden" id="server-error">
+      <img src="./images/not-found_v1.png" class="nothing-found__img" alt="Ничего не найдено">
+      <h3 class="title nothing-found__title">Нет ответа сервера</h3>
+      <p class="nothing-found__text">К сожалению сервер не дал ответа</p>
+    </div>
+    <section class="search-results section hidden">
+      <div class="search-results__header">
+        <h2 class="title search-results__title">Результаты поиска</h2>
+        <a href="./analytics.html" class="search-results__link link" target="_blank">Посмотреть аналитику <img
+            src="./images/arrow.png" alt="стрелка"></a>
+      </div>
+      <div class="search-results__list">
+        <template id="newsCard">
+          <div class="news-card">
+            <a class="news-card__link link" href="" target="_blank">
+              <img class="news-card__image" alt="иллюстрация к новости" src="">
+              <div class="news-card__description">
+                <div class="news-card__date"></div>
+                <h3 class="title news-card__title"></h3>
+                <p class="news-card__text"></p>
+                <p class="news-card__source"></p>
+              </div>
+            </a>
+          </div>
+        </template>
+      </div>
+      <button class="search-results__more-button hidden">Показать еще</button>
+    </section>
+    <section class="about-author section_narrow">
+      <picture>
+        <source srcset="./images/about-author-mobile.png" type="image/png" media="(max-width: 575px)">
+        <source srcset="./images/about-author-tablet.png" type="image/png" media="(max-width: 991px)">
+        <source srcset="./images/about-author-laptop.png" type="image/png"
+                media="(max-width: 1191px)">
+        <img src="./images/about-author.png" alt="author photo" class="about-author__img">
+      </picture>
+      <div class="about-author__content">
+        <h2 class="title about-author__title">Об авторе</h2>
+        <p class="about-author__paragraph">Это блок с описанием автора проекта. Здесь следует указать, как вас зовут,
+          чем вы занимаетесь, какими технологиями разработки владеете.</p>
+        <p class="about-author__paragraph">Также можно рассказать о процессе обучения в Практикуме, чему вы тут
+          научились, и чем можете помочь потенциальным заказчикам.</p>
+      </div>
+    </section>
+  </main>
+  <footer class="footer section_narrow">
+    <p class="footer__copyright">&copy; Supersite</p>
+    <nav>
+      <ul class="footer__links">
+        <li class="footer__item"><a href="index.html" class="link footer__link">Главная</a></li>
+        <li class="footer__item"><a href="about.html" class="link footer__link">О проекте</a></li>
+        <li class="footer__item"><a href="https://praktikum.yandex.ru/" class="link footer__link"
+                                    target="_blank">Яндекс.Практикум</a>
+        </li>
+      </ul>
+    </nav>
+    <nav>
+      <ul class="footer__social">
+        <li class="footer__social-item"><a href="https://github.com/DaneDavydov" target="_blank"><img
+            src="./images/github.svg" alt="GitHub"></a></li>
+        <li class="footer__social-item"><a href="https://www.facebook.com/" target="_blank"><img
+            src="./images/facebook.svg" alt="Facebook"></a></li>
+      </ul>
+    </nav>
+  </footer>
+</div>
+<script src="./scripts/main.09072edc5e8447801065.js"></script>
+</body>
+
+</html>
