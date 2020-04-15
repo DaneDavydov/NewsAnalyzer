@@ -15,9 +15,9 @@ export default class NewsCard {
     img.classList.add('news-card__image');
     img.src = data.urlToImage;
     img.alt = 'иллюстрация к новости';
-    // img.onerror = function () {
-    //   img.src = '../../images/not-found_v1.png'; // Ошибка загрузки
-    // };
+    img.onerror = function () {
+      img.src = './images/not-found_v1.png'; // Ошибка загрузки
+    };
     link.appendChild(img);
 
     const description = document.createElement('div');
