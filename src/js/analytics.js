@@ -35,7 +35,7 @@ window.onload = () => {
     articles
         .filter(e => queryDate(new Date(e.publishedAt)) == queryDate(dateStatistics(i)))
         .forEach(news => {
-          counter = numberOfMentions(news.title, query) + numberOfMentions(news.description, query) + counter;
+          counter = numberOfMentions(news.title, query) + counter;
         });
     const date = dateStatistics(i);
     statistics.render(date.getDate() + ', ' + date.toLocaleDateString("ru", {weekday: 'short'}), counter);
